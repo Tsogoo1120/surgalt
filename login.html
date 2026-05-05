@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="mn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#6d6559",
+                        "tertiary": "#655e52",
+                        "on-secondary-fixed-variant": "#475f64",
+                        "on-primary-container": "#3f574c",
+                        "on-secondary-container": "#3e565a",
+                        "primary-dim": "#40584d",
+                        "surface-dim": "#d9dbd6",
+                        "surface-container-high": "#e7e9e4",
+                        "surface-tint": "#4c6459",
+                        "surface-bright": "#faf9f6",
+                        "on-surface": "#303330",
+                        "on-error-container": "#6e0a12",
+                        "surface-container": "#eeeeea",
+                        "primary-container": "#cde9da",
+                        "surface-variant": "#e1e3de",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#fa746f",
+                        "secondary-dim": "#3f575c",
+                        "on-primary": "#e5fff1",
+                        "inverse-surface": "#0d0f0d",
+                        "inverse-primary": "#e1fdee",
+                        "primary": "#4c6459",
+                        "on-tertiary": "#fff8f0",
+                        "on-secondary-fixed": "#2b4348",
+                        "outline-variant": "#b0b3ae",
+                        "error-dim": "#67040d",
+                        "background": "#faf9f6",
+                        "on-primary-fixed": "#2c443a",
+                        "inverse-on-surface": "#9d9d9a",
+                        "on-primary-fixed-variant": "#486155",
+                        "surface-container-low": "#f4f4f0",
+                        "on-tertiary-container": "#625b4f",
+                        "outline": "#797b78",
+                        "secondary-fixed": "#cde7ed",
+                        "surface": "#faf9f6",
+                        "secondary-fixed-dim": "#bfd9de",
+                        "tertiary-fixed-dim": "#efe4d4",
+                        "primary-fixed-dim": "#bfdbcc",
+                        "on-surface-variant": "#5d605c",
+                        "secondary": "#4b6368",
+                        "tertiary-container": "#fdf2e2",
+                        "on-error": "#fff7f6",
+                        "tertiary-dim": "#595246",
+                        "primary-fixed": "#cde9da",
+                        "secondary-container": "#cde7ed",
+                        "surface-container-highest": "#e1e3de",
+                        "on-tertiary-fixed": "#4f493d",
+                        "on-secondary": "#ecfcff",
+                        "tertiary-fixed": "#fdf2e2",
+                        "on-background": "#303330",
+                        "error": "#a83836"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #faf9f6;
+            color: #303330;
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(48, 51, 48, 0.08);
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spin {
+            display: inline-block;
+            animation: spin 0.8s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- Top Navigation -->
+<nav class="bg-surface dark:bg-[#1a1c1a] flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto top-0">
+    <div class="flex items-center gap-2">
+        <span class="text-xl font-bold text-primary dark:text-[#bfdbcc] font-headline">Mindful Canvas</span>
+    </div>
+    <div class="hidden md:flex gap-8 items-center">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm font-medium" href="#">Тусламж</a>
+        <span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+    <div class="w-full max-w-lg">
+
+        <!-- Header -->
+        <div class="mb-12 text-center md:text-left">
+            <h1 class="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight mb-4">
+                Оношилгооны платформд нэвтрэх
+            </h1>
+            <div class="w-16 h-1 bg-primary-fixed-dim mb-6 hidden md:block"></div>
+            <p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-md">
+                Байгууллагаас олгосон тусгай түлхүүрийг ашиглан нэвтэрч, оношилгоонд хамрагдана уу.
+            </p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="bg-surface-container-lowest editorial-shadow rounded-xl p-8 md:p-12 relative overflow-hidden">
+
+            <!-- Decorative circles -->
+            <div class="absolute top-0 right-0 w-32 h-32 opacity-5 pointer-events-none">
+                <svg fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="text-primary" cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.5"></circle>
+                    <circle class="text-primary" cx="50" cy="50" r="30" stroke="currentColor" stroke-width="0.5"></circle>
+                    <circle class="text-primary" cx="50" cy="50" r="20" stroke="currentColor" stroke-width="0.5"></circle>
+                </svg>
+            </div>
+
+            <form class="space-y-8" id="login-form" novalidate>
+                <div class="space-y-2">
+                    <label class="font-label text-sm font-semibold tracking-wider text-on-surface-variant uppercase" for="api-key">
+                        API Түлхүүр
+                    </label>
+                    <div class="relative group">
+                        <input
+                            class="w-full bg-surface-container-high border-none rounded-xl py-4 px-5 font-body text-on-surface placeholder:text-outline focus:ring-1 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all"
+                            id="api-key"
+                            name="api-key"
+                            placeholder="Түлхүүрээ энд оруулна уу"
+                            type="text"
+                            autocomplete="off"
+                        />
+                        <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline group-focus-within:text-primary transition-colors">vpn_key</span>
+                    </div>
+                    <!-- Inline error -->
+                    <p id="error-msg" class="hidden font-body text-sm text-error flex items-center gap-1 mt-1">
+                        <span class="material-symbols-outlined text-base">error</span>
+                        API түлхүүрийг оруулна уу.
+                    </p>
+                </div>
+
+                <!-- Submit button -->
+                <button
+                    id="login-btn"
+                    class="w-full bg-primary text-on-primary font-body font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-primary-dim transition-all active:opacity-80 editorial-shadow disabled:opacity-60 disabled:cursor-not-allowed"
+                    type="submit"
+                >
+                    <span id="btn-label">Нэвтрэх</span>
+                    <span id="btn-arrow" class="material-symbols-outlined text-sm">arrow_forward</span>
+                    <span id="btn-spinner" class="material-symbols-outlined text-sm spin hidden">refresh</span>
+                </button>
+            </form>
+
+            <!-- Card footer -->
+            <div class="mt-10 pt-8 border-t border-surface-variant flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span class="text-sm text-on-surface-variant font-body">Түлхүүр байхгүй юу?</span>
+                <a class="text-sm text-primary font-semibold underline underline-offset-4 hover:opacity-80" href="#">Удирдлагатай холбогдох</a>
+            </div>
+        </div>
+
+        <!-- Security note -->
+        <div class="mt-8 flex items-start gap-3 px-2">
+            <span class="material-symbols-outlined text-secondary text-xl mt-0.5">security</span>
+            <p class="text-xs text-on-surface-variant font-body leading-normal">
+                Таны мэдээлэл нууцлалын өндөр зэрэглэлд хадгалагдах бөгөөд зөвхөн мэргэжлийн түвшинд оношилгоонд ашиглагдана.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+<!-- Decorative Sidebar Image -->
+<div class="fixed right-0 top-0 h-full w-1/4 hidden xl:block bg-surface-container-low overflow-hidden">
+    <img
+        alt="Calm aesthetic image"
+        class="w-full h-full object-cover opacity-60 mix-blend-multiply"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx6quGpk6UnrfF18qj5htBrABVW6cE9u6l-Nr9SMrPCK2Fq7wqZGa2OKJ2pvRRB8MAm5btuDn4TKeWurP9GnmqyNargyA5-tZoQW1-zxMXGLAuIL-YvJheSHTAr7pieVaae9JVeQpaKaVcDqDwMo8k7v1hxeQj9xy9_u0FJoqQDwLUWU3RP6kyyjXn6HyxPa2_0v1VBCRF0s6F10SluCsuNZCjRf81C57CtfAYE-rfSGRmKQYflOv2mVkzIcmnH1s6U5lS9WG8Q8o"
+    />
+    <div class="absolute inset-0 bg-gradient-to-l from-surface to-transparent"></div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-[#232623] w-full mt-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+        <div class="mb-6 md:mb-0">
+            <p class="font-body text-sm tracking-wide text-secondary dark:text-[#cde7ed]">
+                © 2024 Сэтгэл Зүйн Сорилтын Платформ. Бүх эрх хуулиар хамгаалагдсан.
+            </p>
+        </div>
+        <div class="flex gap-8">
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors font-body text-sm" href="#">Нууцлалын бодлого</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors font-body text-sm" href="#">Тусламж</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors font-body text-sm" href="#">Холбоо барих</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const form = document.getElementById('login-form');
+    const input = document.getElementById('api-key');
+    const errorMsg = document.getElementById('error-msg');
+    const btn = document.getElementById('login-btn');
+    const btnLabel = document.getElementById('btn-label');
+    const btnArrow = document.getElementById('btn-arrow');
+    const btnSpinner = document.getElementById('btn-spinner');
+
+    // Clear error on typing
+    input.addEventListener('input', function () {
+        errorMsg.classList.add('hidden');
+        input.classList.remove('ring-1', 'ring-error');
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const key = input.value.trim();
+
+        // Validate
+        if (!key) {
+            errorMsg.classList.remove('hidden');
+            input.classList.add('ring-1', 'ring-error');
+            input.focus();
+            return;
+        }
+
+        // Loading state
+        btn.disabled = true;
+        btnLabel.textContent = 'Нэвтэрч байна...';
+        btnArrow.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+
+        // Store key and redirect
+        localStorage.setItem('mc_api_key', key);
+
+        setTimeout(function () {
+            window.location.href = 'mindful-canvas/dist/index.html';
+        }, 800);
+    });
+</script>
+
+</body></html>
